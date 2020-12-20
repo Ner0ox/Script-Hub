@@ -199,18 +199,3 @@ function Properties:Button(Name, description, callback)
 end
 return Properties;
 end
-
-local a = library:Window("BITCH HI");
-
-a:Button("BEST BTN", "This is a button!", function()
-    print("Helli!")
-end)
-a:Button("DV4 GAMER", "dv4 gamer", function()
-    print("dv4 gamer")
-end)
-a:Button("ATORIFY GAMER", "atorify gamer", function()
-    print("atorify gamer")
-end)
-a:Button("hiko bad", "hiko gay", function()
-    print("hiko lesbian")
-end)
