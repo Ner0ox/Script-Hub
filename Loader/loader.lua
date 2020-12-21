@@ -19,7 +19,7 @@ function Utils.Setup()
         end,
         
         LOAD_SCRIPT = function(self)
-            if (not Utils.IsLoaded) then 
+            if (not Utils.IsLoaded) and GotScript ~= nil then 
                 loadstring(game:HttpGet(GotScript))()
                 Utils.IsLoaded = true;
                 return;
@@ -245,12 +245,11 @@ end
 action()
 coroutine.resume(coroutine.create(function()
 	load_UI()
+	local SetupGames = Utils.Setup()
+	SetupGames:CheckforGame()
 	wait(.5)
 	if execute_Btn and execute_Btn.BackgroundTransparency ~= 0 then 
 		execute_Btn.MouseButton1Click:Connect(function()
-			local SetupGames = Utils.Setup()
-			SetupGames:CheckforGame()
-	
 			repeat wait() 
 				SetupGames:LOAD_SCRIPT()
 			until not SetupGames:LOAD_SCRIPT()
