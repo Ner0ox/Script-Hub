@@ -161,7 +161,7 @@ local Labels = Labels;
 local execBtn = execute_Btn;
 local splitterLine = Splitter;
 	
-local main = Sexy;
+local main = Loader;
 	
 function createTween(Object,properties,delayTime)
 	local infoTween = TweenInfo.new(tonumber(delayTime),Enum.EasingStyle.Sine,Enum.EasingDirection.InOut,0,false,0);
