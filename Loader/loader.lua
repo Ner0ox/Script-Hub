@@ -135,7 +135,7 @@ Title.Position = UDim2.new(0.5, 0, -0.00100000005, 0)
 Title.Size = UDim2.new(1, 0, 0, 22)
 Title.ZIndex = 2
 Title.Font = Enum.Font.SourceSans
-Title.Text = "Nerox Hub - " .. Utils.GAMENAME
+Title.Text = "Nerox Hub - Waiting.."
 Title.TextColor3 = Color3.fromRGB(182, 182, 182)
 Title.TextSize = 18.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
@@ -250,6 +250,7 @@ coroutine.resume(coroutine.create(function()
 	SetupGames:CheckforGame()
 	wait(.5)
 	if execute_Btn and execute_Btn.BackgroundTransparency ~= 0 then 
+		Title.Text = "Nerox Hub - " .. tostring(Utils.GAMENAME)
 		execute_Btn.MouseButton1Click:Connect(function()
 			repeat wait() 
 				SetupGames:LOAD_SCRIPT()
