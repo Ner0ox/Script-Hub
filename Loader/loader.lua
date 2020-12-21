@@ -4,8 +4,7 @@ local Utils = {IsLoaded = nil,GAMENAME = nil}
 
 function Utils.Setup()
     local GotScript = nil
-    
-    repeat wait(.1) until GotScript ~= nil
+   
     return {
         CheckforGame = function(self)
             for i,v in pairs(GamesList) do 
@@ -250,16 +249,14 @@ coroutine.resume(coroutine.create(function()
 	local SetupGames = Utils.Setup()
 	SetupGames:CheckforGame()
 	wait(.5)
-	if execute_Btn and execute_Btn.BackgroundTransparency ~= 0 then 
-		Title.Text = "Nerox Hub - " .. tostring(Utils.GAMENAME)
-		execute_Btn.MouseButton1Click:Connect(function()
-			repeat wait() 
-				SetupGames:LOAD_SCRIPT()
-			until not SetupGames:LOAD_SCRIPT()
-			action()
-		end)
+	Title.Text = "Nerox Hub - " .. tostring(Utils.GAMENAME)
+	execute_Btn.MouseButton1Click:Connect(function()
+		repeat wait() 
+			SetupGames:LOAD_SCRIPT()
+		until not SetupGames:LOAD_SCRIPT()
+		action()
+	end)
 				
-		repeat wait(1) until execute_Btn.BackgroundTransparency == 1
-		action():CLOSE()
-	end
+	repeat wait(1) until execute_Btn.BackgroundTransparency == 1
+	action():CLOSE()
 end))
