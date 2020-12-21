@@ -241,6 +241,7 @@ local load_UI = function()
 		end
 	end)
 	repeat wait(.1) until tween1.Completed;
+	return;
 end
 	
 action()
