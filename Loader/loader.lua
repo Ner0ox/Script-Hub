@@ -1,6 +1,6 @@
 local GamesList = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Loader/games.json",true))
 
-local Utils = {IsLoaded = nil}
+local Utils = {IsLoaded = nil,GAMENAME = nil}
 
 function Utils.Setup()
     local GotScript = nil
@@ -12,6 +12,7 @@ function Utils.Setup()
                     if v.gameId == game.PlaceId then 
                         GotScript = v.script
                         Utils.IsLoaded = false
+			Utils.GAMENAME = v		
                         return;
                     end
                 end
@@ -255,5 +256,8 @@ coroutine.resume(coroutine.create(function()
 			until not SetupGames:LOAD_SCRIPT()
 			action()
 		end)
+				
+		repeat wait(1) until execute_Btn.BackgroundTransparency == 1
+		action():CLOSE()
 	end
 end))
