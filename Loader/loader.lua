@@ -5,6 +5,7 @@ local Utils = {IsLoaded = nil,GAMENAME = nil}
 function Utils.Setup()
     local GotScript = nil
     
+    repeat wait(.1) until GotScript ~= nil
     return {
         CheckforGame = function(self)
             for i,v in pairs(GamesList) do 
