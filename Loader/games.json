@@ -1,5 +1,6 @@
 {
   "Ragdoll Engine":{"gameId":2041312716,"script":"https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Games/Ragdoll-Engine/RagdollEngine.lua","Status":true},
   "Tower of Hell":{"gameId":1962086868,"script":"https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Games/Tower-of-Hell/TOH.lua","Status":true},
-   "Doomspire Brickbattle":{"gameId":1215581239,"script":"https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Games/Doomspire-BrickBattle/DSBB.lua","Status":true}
+  "Doomspire Brickbattle":{"gameId":1215581239,"script":"https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Games/Doomspire-BrickBattle/DSBB.lua","Status":true}
+  "Doomspire Brickbattle":{"gameId":301549746,"script":"https://raw.githubusercontent.com/Ner0ox/Script-Hub/main/Games/Counter-Blox/CBRO.lua","Status":true}
 }
